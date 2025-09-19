@@ -1,0 +1,220 @@
+.contact {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact__container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact__title {
+  font-size: 2.5em;
+  font-weight: bold;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.contact__subtitle {
+  color: #718096;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Mensaje de éxito */
+.contact__success {
+  background: linear-gradient(45deg, #48bb78, #38a169);
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: slideInDown 0.5s ease;
+  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);
+}
+
+.contact__success-icon {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.contact__success h3 {
+  margin: 10px 0;
+  font-size: 1.3em;
+}
+
+.contact__success p {
+  opacity: 0.9;
+}
+
+/* Formulario */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact__form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__label {
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact__input,
+.contact__textarea {
+  padding: 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #f7fafc;
+  font-family: inherit;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+.contact__input--error {
+  border-color: #f56565;
+  background: #fed7d7;
+}
+
+.contact__textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.contact__error {
+  color: #e53e3e;
+  font-size: 0.9em;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.contact__submit {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 18px 30px;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.contact__submit:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.contact__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contact__spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.contact__info {
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.contact__info h3 {
+  color: #2d3748;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.contact__info p {
+  color: #718096;
+  line-height: 1.6;
+}
+
+/* Animaciones */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .contact {
+    padding: 20px 10px;
+  }
+
+  .contact__container {
+    padding: 30px 20px;
+  }
+
+  .contact__title {
+    font-size: 2em;
+  }
+
+  .contact__subtitle {
+    font-size: 1em;
+  }
+
+  .contact__input,
+  .contact__textarea {
+    font-size: 16px; /* Evita el zoom en iOS */
+  }
+}
