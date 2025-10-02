@@ -1,4 +1,3 @@
-// src/components/Navbar/Navbar.jsx
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
@@ -35,6 +34,13 @@ const Navbar = () => {
             onClick={closeMenu}
           >
             📁 Subir Imagen
+          </Link>
+          <Link 
+            to="/servicios" 
+            className={`navbar__link ${isActive('/servicios') ? 'navbar__link--active' : ''}`}
+            onClick={closeMenu}
+          >
+            🏨 Servicios
           </Link>
           <Link 
             to="/contacto" 

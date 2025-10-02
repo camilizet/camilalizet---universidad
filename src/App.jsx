@@ -1,8 +1,8 @@
-// src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ImageUploader from './components/ImageUploader';
+import Servicios from './pages/Servicios';
 import Contact from './pages/Contact';
 import './App.css';
 
@@ -15,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<ImageUploader />} />
             <Route path="/subir-imagen" element={<ImageUploader />} />
+            <Route path="/servicios" element={<Servicios />} />
             <Route path="/contacto" element={<Contact />} />
           </Routes>
         </main>
